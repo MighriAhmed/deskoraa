@@ -38,16 +38,23 @@ namespace DESKORAA
         }
         public void AddControls(Form F)
         {
-            this.CenterPanel.Controls.Clear();
+            this.guna2Panel3.Controls.Clear();
             F.Dock = DockStyle.Fill;
             F.TopLevel = false;
-            CenterPanel.Controls.Add(F);
+            guna2Panel3.Controls.Add(F);
             F.Show();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            // Load frmUserView in the content area
+            frmUserView userView = new frmUserView();
+            AddControls(userView);
         }
     }
 }

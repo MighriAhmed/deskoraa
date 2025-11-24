@@ -19,12 +19,26 @@ namespace DESKORAA
 
         public virtual void btnadd_Click(object sender, EventArgs e)
         {
+            // Close the form - if embedded, it will be removed from parent
             this.Close();
+            // If we're in frmMain, go back to frmUserView
+            if (frmMain.Instance != null)
+            {
+                frmUserView userView = new frmUserView();
+                frmMain.Instance.AddControls(userView);
+            }
         }
 
         public virtual void btnclose_Click(object sender, EventArgs e)
         {
-
+            // Close the form - if embedded, it will be removed from parent
+            this.Close();
+            // If we're in frmMain, go back to frmUserView
+            if (frmMain.Instance != null)
+            {
+                frmUserView userView = new frmUserView();
+                frmMain.Instance.AddControls(userView);
+            }
         }
     }
 }

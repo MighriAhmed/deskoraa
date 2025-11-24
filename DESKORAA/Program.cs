@@ -14,7 +14,10 @@ namespace DESKORAA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmlogin());
-            Application.Run(new frmUserView());
+            frmMain mainForm = new frmMain();
+            frmUserView userView = new frmUserView();
+            mainForm.AddControls(userView);
+            Application.Run(mainForm);
         }
     }
 }

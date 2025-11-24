@@ -154,6 +154,7 @@
             this.guna2Button3.TabIndex = 2;
             this.guna2Button3.Text = "Gestion de produit";
             this.guna2Button3.TextOffset = new System.Drawing.Point(12, 0);
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button4
             // 
